@@ -109,7 +109,7 @@ end = '2025-08-07'
 data = yf.download(stock, start, end)
 
 st.subheader('Stock Data')
-st.write(data)
+st.write(data.sort_index(ascending=False))
 
 data_train = pd.DataFrame(data['Close'][0: int(len(data)*0.80)])
 data_test = pd.DataFrame(data['Close'][int(len(data)*0.80): len(data)])
@@ -178,4 +178,5 @@ plt.ylabel('Price')
 plt.legend()
 plt.show()
 st.pyplot(fig4)
+
 
