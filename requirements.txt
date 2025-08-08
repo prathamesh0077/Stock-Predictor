@@ -1,12 +1,12 @@
-streamlit
 pandas
 numpy
 matplotlib
 yfinance
 tensorflow
 scikit-learn
+streamlit
 streamlit-autorefresh
-streamlit_autorefresh
-datetime
+
+
 
 
