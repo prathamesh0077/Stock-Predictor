@@ -6,7 +6,8 @@ import pandas as pd
 import yfinance as yf
 from tensorflow.keras.models import load_model
 import streamlit as st
-
+from datetime import datetime
+from streamlit_autorefresh import st_autorefresh
 
 import matplotlib.pyplot as plt
 
@@ -182,6 +183,7 @@ plt.ylabel('Price')
 plt.legend()
 plt.show()
 st.pyplot(fig4)
+
 
 
 
