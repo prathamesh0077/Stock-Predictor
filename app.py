@@ -1,6 +1,8 @@
 
 
 
+
+
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -104,7 +106,7 @@ if use_dropdown == "Dropdown":
 else:
     stock = st.text_input("✍️ Enter Stock Symbol", "TSLA")
 
- Auto-refresh every 12 hours
+# Auto-refresh every 12 hours
 st_autorefresh(interval=43200000, key="datarefresh")
 
 
@@ -115,6 +117,7 @@ data = yf.download(stock, start, end)
 
 st.subheader('Stock Data')
 st.write(data.sort_index(ascending=False))
+#st.write(data)
 
 data_train = pd.DataFrame(data['Close'][0: int(len(data)*0.80)])
 data_test = pd.DataFrame(data['Close'][int(len(data)*0.80): len(data)])
@@ -183,8 +186,4 @@ plt.ylabel('Price')
 plt.legend()
 plt.show()
 st.pyplot(fig4)
-
-
-
-
 
