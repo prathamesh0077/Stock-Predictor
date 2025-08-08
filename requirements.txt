@@ -5,5 +5,5 @@ matplotlib
 yfinance
 tensorflow
 scikit-learn
-streamlit_autorefresh
-datetime
+streamlit-autorefresh
+
