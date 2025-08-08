@@ -6,4 +6,7 @@ yfinance
 tensorflow
 scikit-learn
 streamlit-autorefresh
+streamlit_autorefresh
+datetime
+
 
