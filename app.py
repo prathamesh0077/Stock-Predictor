@@ -103,8 +103,12 @@ if use_dropdown == "Dropdown":
 else:
     stock = st.text_input("✍️ Enter Stock Symbol", "TSLA")
 
+ Auto-refresh every 12 hours
+st_autorefresh(interval=43200000, key="datarefresh")
+
+
 start = '2015-01-01'
-end = '2025-08-07'
+end = datetime.today().strftime('%Y-%m-%d')
 
 data = yf.download(stock, start, end)
 
@@ -178,5 +182,6 @@ plt.ylabel('Price')
 plt.legend()
 plt.show()
 st.pyplot(fig4)
+
 
 
